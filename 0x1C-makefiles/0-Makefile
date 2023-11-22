@@ -1,0 +1,16 @@
+CC=gcc
+CFLAGS=-Wall -Werror -Wextra -pedantic
+
+all: school
+
+school: main.c school.c
+	$(CC) $(CFLAGS) main.c school.c -o school
+
+clean:
+	rm -f school
+
+oclean: clean
+
+fclean: oclean
+
+re: fclean all
